@@ -1,20 +1,21 @@
+/* Reset default styles for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Navbar styles */
 .nav-container {
     display: flex;
     justify-content: space-between;
-    text-align: center;
     align-items: center;
     background-color: white;
+    padding: 10px;
 }
 
 .nav-container h1 {
-    margin-left: 5rem;
-    
+    margin-left: 10px;
 }
 
 .list-container {
@@ -24,150 +25,196 @@
 
 .list-container li {
     margin-right: 10px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .list-container a {
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
-    transition: color 0.3s; 
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
-.info-container {
-   display: flex;
-   flex-direction: column;
-   height: 500px;
-   width: 500px;
-   margin: auto;
-   gap: 20px;
 
-}
-.img-container{
+/* Info container styles */
+.info-container {
     display: flex;
-}
-.img-container img{
-    margin-left: 100px;
-    border-radius: 50%;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    gap: 20px;
+    text-align: center;
 }
 
-.info-container span{
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.info-container span {
     color: blue;
+    font-size: 1.5rem;
 }
-.info-container {
-    font-size: 2rem;
-}
+
+/* Skills container styles */
 .skills-container {
-    width: 1000px;
-    height: 400px;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: auto;
     background-color: #333;
-  }
-  
-  .skills-container img {
+    padding: 20px;
+}
+
+.skills-container img {
     border: 2px solid #333;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
-  }
-  
-  .skills-container img:hover {
-    transform: scale(1.1);
-  }
-.skill-heading{
-    text-align: center;
-    margin-top: 50px;
+    max-width: 100%;
 }
+
+.skills-container img:hover {
+    transform: scale(1.1);
+}
+
+.skill-heading {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+/* About section styles */
 .about {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin: 20px;
     padding: 20px;
     background-color: #f1f1f1;
-  }
-  
-  .about div {
-    flex: 1;
+}
+
+.about div {
     padding: 10px;
-  }
-  
-  .about img {
+}
+
+.about img {
     max-width: 100%;
     height: auto;
     display: block;
     border: 1px solid #ddd;
     border-radius: 4px;
-  }
-  
-  .paragraph {
+}
+
+.paragraph {
     text-align: justify;
-  }
-  
-  .paragraph p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-  }
-  .btn {
+    font-size: 1rem;
+}
+
+/* Button styles */
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .btn button {
+    margin: 20px;
+}
+
+.btn button {
     background-color: blue;
     color: white;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
-  }
-  .btn button:hover{
+    font-size: 1rem;
+}
+
+.btn button:hover {
     background-color: rgb(77, 77, 223);
-  }
-  .contact {
+}
+
+/* Contact form styles */
+.contact {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
-  }
-  
-  label {
+    padding: 10px;
+}
+
+label {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"] {
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    font-size: 16px;
-  }
-  
-  .btn2 {
+    font-size: 1rem;
+}
+
+.btn2 {
     text-align: center;
-  }
-  
-  button {
+    margin: 20px;
+}
+
+button {
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1rem;
     transition: background-color 0.3s;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
-  
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container h1 {
+        font-size: small;
+    }
+
+    .list-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .info-container {
+        max-width: 100%;
+    }
+
+    .info-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .img-container img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .skills-container {
+        max-width: 100%;
+    }
+
+    .about {
+        text-align: center;
+    }
+}
